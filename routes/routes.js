@@ -1,9 +1,10 @@
 const Router = require("koa-router");
+const controller = require("../controllers/controller");
 
-const router = Router();
-
-router.get("/check", (ctx) => {
-  ctx.body = "hello this is middleware";
+const home = new Router({
+  prefix: "/home",
 });
 
-module.exports = router;
+home.get("/check", controller.getCheck);
+
+module.exports = home;
