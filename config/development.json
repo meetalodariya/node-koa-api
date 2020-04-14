@@ -1,0 +1,6 @@
+{
+  "dbconfig": {
+    "port": 3000,
+    "uri": "mongodb://meet:1sSJFLRoMa1ZuPsj@cluster0-shard-00-00-nptjv.mongodb.net:27017,cluster0-shard-00-01-nptjv.mongodb.net:27017,cluster0-shard-00-02-nptjv.mongodb.net:27017/test?authSource=admin&replicaSet=Cluster0-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true"
+  }
+}
