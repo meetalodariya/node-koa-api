@@ -1,8 +1,11 @@
-const configConsts = require("../constants");
+const jwt = require("jsonwebtoken");
 
 exports.getCheck = async (ctx) => {
-  ctx.body = `
-  Server is running on: ${ctx.config.dbconfig.port}
-  URI : ${ctx.config.dbconfig.uri}
-  `;
+  const userId = ctx.state.userId;
+  ctx.body = { userId: `${userId}`, loggedIn: true };
+};
+
+exports.getToken = async (ctx) => {
+  const token = jwt.sign({ userId: "12345" }, "meetpatel", { expiresIn: "1h" });
+  ctx.body = { token: token };
 };
