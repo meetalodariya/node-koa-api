@@ -1,1 +1,5 @@
-{}
+{
+  "api": {
+    "host": "https://search.ams.usda.gov/"
+  }
+}
