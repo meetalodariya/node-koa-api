@@ -1,7 +1,6 @@
 const Koa = require("koa");
 const app = new Koa();
 const config = require("config");
-const configConsts = require("./constants");
 const clientRoutes = require("./routes/clientFarmersRoutes");
 const appRoutes = require("./routes/routes");
 const json = require("koa-json");

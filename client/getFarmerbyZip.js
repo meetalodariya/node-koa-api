@@ -1,4 +1,4 @@
-const Axios = require("../utils/xhr");
+const Axios = require("./xhr");
 
 exports.getFarmersbyZip = async (ctx, zip) => {
   const host = ctx.state.config.api.host;
