@@ -8,5 +8,11 @@ exports.getFarmersbyZip = async (ctx, zip) => {
     null,
     { "Content-Type": "application/json" }
   );
-  return await xhr.send();
+  let res = await xhr.send();
+  if (res.results[0].id == "Error") {
+    let err = new Error(res.results[0].marketname);
+    err.status = 404;
+    throw err;
+  }
+  return res;
 };

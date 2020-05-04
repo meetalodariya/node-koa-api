@@ -1,5 +1,5 @@
 const Router = require("koa-router");
-const farmerController = require("../controllers/farmerController");
+const farmerController = require("../controllers/farmer/farmerController");
 const marketController = require("../controllers/marketController");
 const { jsonAuth } = require("../middlewares/jwtAuth");
 const auth = require("../middlewares/jwtAuth").jsonAuth;

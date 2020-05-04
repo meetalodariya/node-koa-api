@@ -2,7 +2,7 @@ const Router = require("koa-router");
 const controller = require("../controllers/healthcheck");
 const { jsonAuth } = require("../middlewares/jwtAuth");
 const auth = require("../middlewares/jwtAuth").jsonAuth;
-const clientCont = require("../controllers/farmerController");
+const clientCont = require("../controllers/farmer/farmerController");
 
 const home = new Router({
   prefix: "/home",
